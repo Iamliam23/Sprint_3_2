@@ -15,10 +15,10 @@ def options():
     return options
 
 @pytest.fixture()
-def driver(request, options):
-    driver = webdriver.Chrome(options=options)
-    request.addfinalizer(driver.quit)
-    return driver
+def driver(options):
+    driver = webdriver.Firefox(options=options)
+    yield driver
+    driver.quit()
 
 @pytest.fixture()
 def get_the_page():
