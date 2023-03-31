@@ -2,17 +2,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import pytest
 
-DEFAULT_WINDOW_SIZE = {
-    1920: "--window-size=1920,1080"
-}
-
-
-@pytest.fixture()
-def options():
-    options = Options()
-    options.add_argument(DEFAULT_WINDOW_SIZE[1920])
-    options.add_argument(DEFAULT_WINDOW_SIZE[1080])
-    return options
 
 @pytest.fixture()
 def firefox_driver(options):
@@ -21,6 +10,6 @@ def firefox_driver(options):
     driver.quit()
 
 @pytest.fixture()
-def get_the_page():
+def get_the_page(firefox_driver):
     firefox_driver.get("https://stellarburgers.nomoreparties.site/")
 
