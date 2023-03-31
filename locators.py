@@ -108,7 +108,7 @@ class Locators():
     ROLLS_SPAN = By.XPATH, "/html/body/div[1]/div/main/section[1]/div[1]/div[1]"   # cпан Булки в секции Соберите бургер на главной
     INGR_LIST_1 = By.XPATH, ".//div/ul[@class = 'BurgerIngredients_ingredients__list__2A-mT'][1]"
 
-    INGR_OBJECT = By.XPATH,".//a[@class = 'BurgerIngredient_ingredient__1TVf6 ml-4 mr-4 mb-8']"   # отдельный ингредиент контейнера в секции Соберите бургер на главной
+    INGR_OBJECT = By.XPATH,"/html/body/div[1]/div/main/section[1]/div[2]/ul[1]/a[2]"   # отдельный ингредиент контейнера в секции Соберите бургер на главной
 
     MENU_CONTAINER = By.XPATH, ".//div[@class = 'BurgerIngredients_ingredients__menuContainer__Xu3Mo']"   # контейнер с ингредиентами в секции Соберите бургер на главной
     MC_LAST_ELEMENT = By.XPATH, ".//ul[3]/a[last()]"    # последний ингредиент контейнера в секции Соберите бургер на главной

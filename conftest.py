@@ -15,12 +15,12 @@ def options():
     return options
 
 @pytest.fixture()
-def driver(options):
+def firefox_driver(options):
     driver = webdriver.Firefox(options=options)
     yield driver
     driver.quit()
 
 @pytest.fixture()
 def get_the_page():
-    driver.get("https://stellarburgers.nomoreparties.site/")
+    firefox_driver.get("https://stellarburgers.nomoreparties.site/")
 
