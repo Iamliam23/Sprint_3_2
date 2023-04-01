@@ -1,4 +1,3 @@
-from conftest import firefox_driver
 from locators import Locators
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
